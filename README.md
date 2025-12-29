@@ -36,9 +36,13 @@ When a user types a message:
 2. The server processes the input
 3. A predefined response is selected
 4. The response is returned and displayed in the chat interface
-
----
-
+## Key Logic:
+Intent MatchingThe bot is pre-programmed with high-value answers. Below is a representation of how the developer-defined responses are structured:
+User Query (Inbuilt),    Bot Knowledge (Response)
+"""What is Python?""",   Explains Python's simplicity and versatility.
+"""What is AI?""",       Defines Artificial Intelligence concepts.
+"""I am sad""",          Provides empathetic emotional support logic.
+"""Joke""",              "Returns a lighthearted, pre-selected joke."
 ## 🛠 Technologies Used
 
 * **Python** – Core programming language
