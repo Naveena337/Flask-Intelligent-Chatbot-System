@@ -1,3 +1,59 @@
+code: 
+from flask import Flask, request, jsonify, render_template_string 
+app = Flask(__name__) 
+HTML_TEMPLATE = """ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Chatbot</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background: #000080; /* Navy Blue Background */ 
+        } 
+        #chat-container { 
+            width: 400px; 
+            height: 600px; 
+            border: 1px solid #ccc; 
+            background: white; 
+            border-radius: 8px; 
+            display: flex; 
+            flex-direction: column; 
+        } 
+        #chat-window { 
+            flex: 1; 
+            padding: 10px; 
+            overflow-y: auto; 
+            border-bottom: 1px solid #ccc; 
+        } 
+        input, button { 
+            padding: 10px; 
+            margin: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            font-size: 14px; 
+        } 
+        button { 
+            background-color: red; 
+            color: white; 
+            cursor: pointer; 
+        } 
+        button:hover { 
+            background-color: #0056b3; 
+        } 
+        /* Button outline turns red when clicked */ 
+        button:focus { 
+            outline: 2px solid red; 
+        } 
+    </style> 
+</head> 
 <body> 
     <div id="chat-container"> 
         <div id="chat-window"></div> 
@@ -82,4 +138,5 @@ def chat():
     bot_response = get_bot_response(user_input) 
     return jsonify({"response": bot_response}) 
 if __name__ == "__main__": 
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080) 
+  
