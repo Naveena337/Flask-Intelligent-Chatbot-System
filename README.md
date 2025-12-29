@@ -38,11 +38,13 @@ When a user types a message:
 4. The response is returned and displayed in the chat interface
 ## Key Logic:
 Intent MatchingThe bot is pre-programmed with high-value answers. Below is a representation of how the developer-defined responses are structured:
-User Query (Inbuilt),    Bot Knowledge (Response)
-"""What is Python?""",   Explains Python's simplicity and versatility.
-"""What is AI?""",       Defines Artificial Intelligence concepts.
-"""I am sad""",          Provides empathetic emotional support logic.
-"""Joke""",              "Returns a lighthearted, pre-selected joke."
+| User Query (Inbuilt Intent) | Bot Knowledge (Programmed Response) |
+|----------------------------|------------------------------------|
+| What is Python? | Explains Python as a popular high-level programming language known for its simplicity and versatility. |
+| What is AI? | Defines Artificial Intelligence as machines designed to perform tasks that typically require human intelligence. |
+| I am sad | Provides empathetic emotional support, reminding the user that they are strong and that tough times are temporary. |
+| Tell me a joke | Returns a lighthearted, pre-selected joke (e.g., “Atoms” or “Skeleton” joke) to engage the user. |
+
 ## 🛠 Technologies Used
 
 * **Python** – Core programming language
